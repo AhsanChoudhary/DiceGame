@@ -1,4 +1,5 @@
 // My Dice Game
+// 
 let rollButton = document.getElementById('myButton');
 let score = document.getElementById('number');
 let randomNumber = 0;
