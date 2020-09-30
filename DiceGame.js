@@ -1,12 +1,12 @@
-// My Dice Game
-// 
+
 let rollButton = document.getElementById('myButton');
 let score = document.getElementById('number');
 let randomNumber = 0;
 let diceImage = document.getElementById('diceImage')
 let winningNumber = 21;
 let losingNumber = 1;
-let playerScore = 0;
+let playerScore = document.getElementById('playerScore')
+let actualScore = 0;
 const generateNumber = () => {
     randomNumber = Math.floor(Math.random() * (6) + 1);
     console.log(randomNumber);
@@ -15,17 +15,20 @@ const generateNumber = () => {
 
 rollButton.addEventListener('click', () => {
     generateNumber();
-    score.textContent += randomNumber 
+    actualScore += randomNumber
+    score.textContent = randomNumber 
     if(randomNumber == 1) {
-        playerScore = 0;
-        console.log("You lose");
+        playerScore.textContent = 0;
+        actualScore = 0;
+        alert("You lose");
     }
-    else if (playerScore > 20) {
-        playerScore = 0;
-        console.log("You win");
+    else if (actualScore > 20) {
+        playerScore.textContent = 0;
+        actualScore = 0;
+        alert("You win");
     }
     else {
-        playerScore += randomNumber
+        playerScore.textContent = actualScore
     }
     diceImage.src = `/images/dice${randomNumber}.png` 
 })

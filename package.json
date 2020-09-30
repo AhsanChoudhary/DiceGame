@@ -1,0 +1,19 @@
+{
+  "name": "dom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "DiceGame.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhsanChoudhary/DiceGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhsanChoudhary/DiceGame/issues"
+  },
+  "homepage": "https://github.com/AhsanChoudhary/DiceGame#readme"
+}
